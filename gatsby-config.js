@@ -3,8 +3,21 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `gatsby_5`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Estudos do Jamstack com Gatsby`,
+    siteUrl: `https://infnet.edu.br`,
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog`,
+      },
+    },
+    "gatsby-plugin-mdx",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+  ],
+
 }
