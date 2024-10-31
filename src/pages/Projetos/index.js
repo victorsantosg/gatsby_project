@@ -3,6 +3,14 @@ import Card from "../../components/Card";
 import * as styles from "./Projetos.module.css";
 import Layout from "../../components/Layout";
 
+// Lista de URLs de imagens para exibir aleatoriamente em cada Card
+const imageUrls = [
+  "/static/img.jpg",
+  "/static/img2.jpg",
+  "/static/img3.jpg",
+  // Mais URLs se necessário
+];
+
 function Projetos() {
   const [repositories, setRepositories] = useState([]);
 
@@ -35,9 +43,11 @@ function Projetos() {
               <Card
                 key={repo.id}
                 name={repo.name}
-                descrption={repo.description}
+                description={repo.description}
                 html_url={repo.html_url}
-                imageUrl={repo.imageUrl}
+                imageUrl={
+                  imageUrls[Math.floor(Math.random() * imageUrls.length)] // Seleciona uma imagem aleatória
+                }
               />
             ))}
           </section>
