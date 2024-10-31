@@ -3,9 +3,10 @@ import * as styles from './Card.module.css'
 import { BsArrowRight } from "react-icons/bs";
 import React from 'react'
 
-function Card({name, description, html_url}) {
+function Card({name, description, html_url, imageUrl}) {
     return (
         <section className={styles.card}>
+            <img src="/static/img.jpg" className={styles.avatar} />
             <h3>{name}</h3> 
             <p>{description}</p>
             <div className={styles.card_footer}>

@@ -37,6 +37,7 @@ function Projetos() {
                 name={repo.name}
                 descrption={repo.description}
                 html_url={repo.html_url}
+                imageUrl={repo.imageUrl}
               />
             ))}
           </section>
