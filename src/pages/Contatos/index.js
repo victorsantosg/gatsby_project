@@ -2,11 +2,13 @@ import React from 'react'
 import { GoMail } from "react-icons/go";
 import * as styles from "./Contatos.module.css"
 import { BsInstagram, BsGithub, BsLinkedin, BsTelephone } from "react-icons/bs"
+import Layout from "../../components/Layout";
 
 
 
 function Contatos() {
     return (
+        <Layout>
             <section className={styles.contatos}>
                 <h2>Contatos</h2>
                 <h3>Entre em contato</h3>
@@ -39,6 +41,7 @@ function Contatos() {
                     </a>
                 </div>
             </section>
+        </Layout>
         
     )
 }

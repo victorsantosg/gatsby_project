@@ -2,10 +2,12 @@ import * as React from 'react'
 import  { Link }  from "gatsby"
 import * as styles from './Home.module.css'
 import developerRed from '../../developer-red.svg'
+import Layout from "../../components/Layout";
 
 function Home () {
     return (
-        <>
+      
+        <Layout>
             <section className={styles.home}>
                 <div className={styles.apresentacao}>
                     <p>
@@ -21,7 +23,7 @@ function Home () {
                     <img className={styles.img_home} src={developerRed} alt="imagem de Home" />
                 </figure>
             </section>
-        </>
+        </Layout>
     )
 }
 
